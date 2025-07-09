@@ -12,34 +12,7 @@
       <h1 class="display-4">Catálogo </h1>
     </div>
 
-    <h3>Localidad</h3>
-    <table class="table table-bordered">
-      <thead class="thead-light">
-        <tr>
-          <th>ID</th>
-          <th>localidad</th>
-          <th>Detalle</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php
-        $conexion = mysqli_connect(getenv('MYSQL_HOST'), getenv('MYSQL_USER'), getenv('MYSQL_PASSWORD'), "practicas");
-
-        $localidadSQL = "SELECT * FROM localidad";
-        $resultado_localidad = mysqli_query($conexion, $localidadSQL);
-
-        while ($fila = mysqli_fetch_object($resultado_localidad)) {
-          echo "<tr>
-            <td>$fila->id</td>
-            <td>$fila->localidad</td>
-            <td>$fila->descripcion</td>
-          </tr>";
-        }
-        ?>
-      </tbody>
-    </table>
-
-    <h3>Paciente</h3>
+    <h3>DATOS PERSONALES DE ANGIE CASTILLO</h3>
     <table class="table table-striped table-responsive">
       <thead>
         <tr>
