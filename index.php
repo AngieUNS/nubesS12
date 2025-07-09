@@ -17,15 +17,6 @@
       background-color: #f4f4f9; /* Fondo suave */
     }
 
-    /* Estilo para el contenedor del contenido */
-    .container {
-      text-align: center;
-      padding: 20px;
-      border-radius: 8px;
-      background-color: white; /* Fondo blanco para el contenedor */
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para darle un toque elegante */
-    }
-
     /* Estilo para la tabla */
     table {
       width: 100%; /* Hace que la tabla ocupe todo el ancho del contenedor */
