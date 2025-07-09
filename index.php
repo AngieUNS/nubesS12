@@ -46,7 +46,8 @@
             <th>Nombre</th>
             <th>Año de Nacimiento</th>
             <th>Edad</th>
-            <th>Correos</th>
+            <th>Correo 1</th>
+            <th>Correo 2 </th>
             <th>Dirección</th>
             <th>Localidad ID</th>
           </tr>
@@ -62,7 +63,8 @@
               <td>$fila->nombre</td>
               <td>$fila->anio_nacimiento</td>
               <td>$edad</td>
-              <td>$fila->correos</td>
+              <td>$fila->correo1</td>
+              <td>$fila->correo2</td>
               <td>$fila->direccion</td>
               <td>$fila->localidad_id</td>
             </tr>";
