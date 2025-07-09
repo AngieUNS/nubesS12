@@ -37,7 +37,7 @@
     ?>
 
     <div class="container">
-      <h3 style="color: red;">Datos personales de <?php echo $nombrePrimerPaciente; ?></h3>
+      <h3 style="color: red; text-align: center;">Datos personales de <?php echo $nombrePrimerPaciente; ?></h3>
 
       <table class="table table-striped table-responsive">
         <thead>
