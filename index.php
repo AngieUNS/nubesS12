@@ -23,7 +23,7 @@
       </thead>
       <tbody>
         <?php
-        $conexion = mysqli_connect(getenv('MYSQL_HOST'), getenv('MYSQL_USER'), getenv('MYSQL_PASSWORD'), "UNS");
+        $conexion = mysqli_connect(getenv('MYSQL_HOST'), getenv('MYSQL_USER'), getenv('MYSQL_PASSWORD'), "catalogo_personas");
 
         $actividadSQL = "SELECT * FROM actividad";
         $resultado_actividad = mysqli_query($conexion, $actividadSQL);
