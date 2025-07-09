@@ -11,24 +11,20 @@
     <div class="jumbotron">
       <h1 class="display-4">Catálogo </h1>
     </div>
-        <?php
-        $conexion = mysqli_connect(getenv('MYSQL_HOST'), getenv('MYSQL_USER'), getenv('MYSQL_PASSWORD'), "practicas");
 
-        $localidadSQL = "SELECT * FROM localidad";
-        $resultado_localidad = mysqli_query($conexion, $localidadSQL);
+    <?php
+    $conexion = mysqli_connect(getenv('MYSQL_HOST'), getenv('MYSQL_USER'), getenv('MYSQL_PASSWORD'), "practicas");
 
-        while ($fila = mysqli_fetch_object($resultado_localidad)) {
-          echo "<tr>
-            <td>$fila->id</td>
-            <td>$fila->localidad</td>
-            <td>$fila->detalle</td>
-          </tr>";
-        }
-        ?>
-      </tbody>
-    </table>
+    $pacienteSQL = "SELECT * FROM paciente LIMIT 1";  // Solo obtener el primer paciente
+    $resultado_paciente = mysqli_query($conexion, $pacienteSQL);
+    $primerPaciente = mysqli_fetch_object($resultado_paciente);  // Obtenemos el primer paciente
 
-    <h3>DATOS PERSONALES DE ANGIE CASTILLO</h3>
+    // Si el primer paciente existe, mostramos su nombre
+    $nombrePrimerPaciente = $primerPaciente ? $primerPaciente->nombre : "No disponible";
+    ?>
+
+    <h3>DATOS PERSONALES DE <?php echo $nombrePrimerPaciente; ?></h3>
+
     <table class="table table-striped table-responsive">
       <thead>
         <tr>
@@ -42,7 +38,7 @@
       </thead>
       <tbody>
         <?php
-        $pacienteSQL = "SELECT * FROM paciente";
+        $pacienteSQL = "SELECT * FROM paciente"; // Obtener todos los pacientes
         $resultado_paciente = mysqli_query($conexion, $pacienteSQL);
 
         while ($fila = mysqli_fetch_object($resultado_paciente)) {
