@@ -53,7 +53,9 @@
         </thead>
         <tbody>
           <?php
-          $pacienteSQL = "SELECT * FROM paciente"; // Obtener todos los pacientes
+          //$pacienteSQL = "SELECT * FROM paciente"; // Obtener todos los pacientes
+          $pacienteSQL = "SELECT * FROM paciente WHERE LEFT(nombre, 1) NOT IN ('A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u')";
+
           $resultado_paciente = mysqli_query($conexion, $pacienteSQL);
 
           while ($fila = mysqli_fetch_object($resultado_paciente)) {
