@@ -5,6 +5,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Catálogo de Personas</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;  /* Asegura que el contenido esté centrado en pantalla completa */
+      margin: 0;
+    }
+    table {
+      width: 80%; /* Ajusta el tamaño de la tabla según necesites */
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
 
@@ -19,7 +33,7 @@
     $nombrePrimerPaciente = $primerPaciente ? $primerPaciente->nombre : "No disponible";
     ?>
 
-       <h3 style="color: red; text-align: center;">Datos personales de <?php echo $nombrePrimerPaciente; ?></h3>
+    <h3 style="color: red; text-align: center;">Datos personales de <?php echo $nombrePrimerPaciente; ?></h3>
 
     <table class="table table-striped table-responsive">
       <thead>
@@ -51,10 +65,10 @@
         ?>
       </tbody>
     </table>
-  </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 </body>
 </html>
+
