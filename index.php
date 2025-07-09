@@ -11,17 +11,6 @@
     <div class="jumbotron">
       <h1 class="display-4">Catálogo </h1>
     </div>
-
-        <h3>Tabla Padre: Actividades</h3>
-    <table class="table table-bordered">
-      <thead class="thead-light">
-        <tr>
-          <th>ID</th>
-          <th>Localidad</th>
-          <th>Detalle</th>
-        </tr>
-      </thead>
-      <tbody>
         <?php
         $conexion = mysqli_connect(getenv('MYSQL_HOST'), getenv('MYSQL_USER'), getenv('MYSQL_PASSWORD'), "practicas");
 
