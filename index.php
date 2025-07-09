@@ -7,10 +7,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
 </head>
 <body>
-  <div class="container">
-    <div class="jumbotron">
-      <h1 class="display-4">Catálogo </h1>
-    </div>
 
     <?php
     $conexion = mysqli_connect(getenv('MYSQL_HOST'), getenv('MYSQL_USER'), getenv('MYSQL_PASSWORD'), "practicas");
