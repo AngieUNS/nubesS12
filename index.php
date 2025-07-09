@@ -28,7 +28,7 @@
     <?php
     $conexion = mysqli_connect(getenv('MYSQL_HOST'), getenv('MYSQL_USER'), getenv('MYSQL_PASSWORD'), "practicas");
 
-    $pacienteSQL = "SELECT * FROM paciente LIMIT 1";  // Solo obtener el primer paciente
+    $pacienteSQL = "SELECT * FROM paciente WHERE LEFT(nombre, 1) NOT IN ('A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u')" LIMIT 1";  // Solo obtener el primer paciente
     $resultado_paciente = mysqli_query($conexion, $pacienteSQL);
     $primerPaciente = mysqli_fetch_object($resultado_paciente);  // Obtenemos el primer paciente
 
