@@ -23,7 +23,7 @@
     $nombrePrimerPaciente = $primerPaciente ? $primerPaciente->nombre : "No disponible";
     ?>
 
-    <h3>DATOS PERSONALES DE <?php echo $nombrePrimerPaciente; ?></h3>
+       <h3 style="color: red; text-align: center;">Datos personales de <?php echo $nombrePrimerPaciente; ?></h3>
 
     <table class="table table-striped table-responsive">
       <thead>
