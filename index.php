@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Catálogo de Personas</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
 
   <style>
@@ -11,8 +10,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;  /* Asegura que el contenido esté centrado en pantalla completa */
+      min-height: 100vh; /* Asegura que el contenido esté centrado en pantalla completa */
       margin: 0;
+      flex-direction: column; /* Hace que los elementos se apilen verticalmente */
     }
     table {
       width: 80%; /* Ajusta el tamaño de la tabla según necesites */
@@ -71,4 +71,3 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 </body>
 </html>
-
