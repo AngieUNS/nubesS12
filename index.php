@@ -26,7 +26,7 @@
         $conexion = mysqli_connect(getenv('MYSQL_HOST'), getenv('MYSQL_USER'), getenv('MYSQL_PASSWORD'), "practicas");
 
         $localidadSQL = "SELECT * FROM localidad";
-        $resultado_actividad = mysqli_query($conexion, $localidadSQL);
+        $resultado_localidad = mysqli_query($conexion, $localidadSQL);
 
         while ($fila = mysqli_fetch_object($resultado_localidad)) {
           echo "<tr>
