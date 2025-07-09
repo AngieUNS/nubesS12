@@ -9,54 +9,54 @@
 <body>
   <div class="container">
     <div class="jumbotron">
-      <h1 class="display-4">Catálogo de Personas</h1>
+      <h1 class="display-4">Catálogo </h1>
     </div>
 
-    <h3>Tabla Padre: Actividades</h3>
+    <h3>Localidad</h3>
     <table class="table table-bordered">
       <thead class="thead-light">
         <tr>
           <th>ID</th>
-          <th>Actividad</th>
+          <th>localidad</th>
           <th>Detalle</th>
         </tr>
       </thead>
       <tbody>
         <?php
-        $conexion = mysqli_connect(getenv('MYSQL_HOST'), getenv('MYSQL_USER'), getenv('MYSQL_PASSWORD'), "catalogo_personas");
+        $conexion = mysqli_connect(getenv('MYSQL_HOST'), getenv('MYSQL_USER'), getenv('MYSQL_PASSWORD'), "practicas");
 
-        $actividadSQL = "SELECT * FROM actividad";
-        $resultado_actividad = mysqli_query($conexion, $actividadSQL);
+        $localidadSQL = "SELECT * FROM localidad";
+        $resultado_actividad = mysqli_query($conexion, $localidadSQL);
 
-        while ($fila = mysqli_fetch_object($resultado_actividad)) {
+        while ($fila = mysqli_fetch_object($resultado_localidad)) {
           echo "<tr>
             <td>$fila->id</td>
-            <td>$fila->actividad</td>
-            <td>$fila->detalle</td>
+            <td>$fila->localidad</td>
+            <td>$fila->descripcion</td>
           </tr>";
         }
         ?>
       </tbody>
     </table>
 
-    <h3>Tabla Hija: Personas</h3>
+    <h3>Paciente</h3>
     <table class="table table-striped table-responsive">
       <thead>
         <tr>
           <th>Nombre</th>
           <th>Año de Nacimiento</th>
-          <th>Edad (Calculado)</th>
-          <th>Correos (Multivalorado)</th>
+          <th>Edad</th>
+          <th>Correos</th>
           <th>Dirección</th>
-          <th>Actividad ID (FK)</th>
+          <th>Actividad ID</th>
         </tr>
       </thead>
       <tbody>
         <?php
-        $personaSQL = "SELECT * FROM persona";
-        $resultado_persona = mysqli_query($conexion, $personaSQL);
+        $pacienteSQL = "SELECT * FROM paciente";
+        $resultado_paciente = mysqli_query($conexion, $pacienteSQL);
 
-        while ($fila = mysqli_fetch_object($resultado_persona)) {
+        while ($fila = mysqli_fetch_object($resultado_paciente)) {
           $edad = date("Y") - $fila->anio_nacimiento;
           echo "<tr>
             <td>$fila->nombre</td>
