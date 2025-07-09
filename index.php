@@ -17,17 +17,6 @@
         $localidadSQL = "SELECT * FROM localidad";
         $resultado_localidad = mysqli_query($conexion, $localidadSQL);
 
-        while ($fila = mysqli_fetch_object($resultado_localidad)) {
-          echo "<tr>
-            <td>$fila->id</td>
-            <td>$fila->localidad</td>
-            <td>$fila->detalle</td>
-          </tr>";
-        }
-        ?>
-      </tbody>
-    </table>
-
     <h3>DATOS PERSONALES DE ANGIE CASTILLO</h3>
     <table class="table table-striped table-responsive">
       <thead>
