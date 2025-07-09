@@ -48,7 +48,7 @@
           <th>Edad</th>
           <th>Correos</th>
           <th>Dirección</th>
-          <th>Actividad ID</th>
+          <th>Localidad ID</th>
         </tr>
       </thead>
       <tbody>
@@ -64,7 +64,7 @@
             <td>$edad</td>
             <td>$fila->correos</td>
             <td>$fila->direccion</td>
-            <td>$fila->actividad_id</td>
+            <td>$fila->localidad_id</td>
           </tr>";
         }
         ?>
